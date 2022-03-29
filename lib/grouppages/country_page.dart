@@ -52,14 +52,13 @@ class CountryTemplate extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.black.withOpacity(0.2),
                     ),
-                    child: Expanded(
-                        child: Text(
+                    child: Text(
                       data1.toString(),
                       style: TextStyle(
-                          color: Colors.white.withOpacity(0.6),
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
-                    )),
+                      color: Colors.white.withOpacity(0.6),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ],
@@ -95,14 +94,12 @@ class CountryTemplate extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.black.withOpacity(0.2),
                     ),
-                    child: Expanded(
-                      child: Text(
-                        data2.toString(),
-                        style: TextStyle(
-                            color: Colors.white.withOpacity(0.6),
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold),
-                      ),
+                    child: Text(
+                      data2.toString(),
+                      style: TextStyle(
+                          color: Colors.white.withOpacity(0.6),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
@@ -139,14 +136,13 @@ class CountryTemplate extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.black.withOpacity(0.2),
                     ),
-                    child: Expanded(
-                        child: Text(
+                    child: Text(
                       data3.toString(),
                       style: TextStyle(
-                          color: Colors.white.withOpacity(0.6),
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
-                    )),
+                      color: Colors.white.withOpacity(0.6),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ],

@@ -125,14 +125,13 @@ class BluesTemplate extends StatelessWidget {
                 ),
                 child: Container(
                     width: 350,
-                    child: Expanded(
-                        child: Text(data.toString(),
+                    child: Text(data.toString(),
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 17,
                       ),
-                    ))),
+                    )),
               ),
             ],
           ),

@@ -417,7 +417,7 @@ class Pages extends StatelessWidget {
                     "Sex Pistols, İngiliz punk rock türünde simgeleşmiş ve pek çok gruba ilham kaynağı olmuş bir punk grubudur. BBC tarafından tam anlamıyla bir İngiliz punk grubu şeklinde tasvir edilmiştir. Grup yalnızca üç sene boyunca (1975-1978) aktif kalmış ve dağılmıştır. Bu süre içerisinde yalnızca bir stüdyo albümü kaydetmiş (1977'de Never Mind the Bollocks, Here's the Sex Pistols) ve dört adet single yayınlamışlardır."
                     "Yayınladıkları tek stüdyo albümü, 2003 yılında Rolling Stone dergisinin yayınladığı tüm zamanların en iyi 500 albümü listesinde 41. sırada yer almıştır. 2010 yılında yeniden toplanarak Londra'da bir konser vermiştir.",
                 data2:
-                    "Sex Pistols'ın kurucuları, vokalist Johnny Rotten, basçı Glen Matlock, gitarist Steve Jones ve baterist Paul Cook'tur. 1977 yılında Matlock'ın yerine Sid Vicious geçmiştir.",
+                    "Sex Pistols'ın kurucuları, vokalist Johnny Rotten, basçı Glen Matlock, gitarist Steve Jones ve baterist Paul Cook'tur.",
               );
             }
             if (pagename == "Punk(2)") {
@@ -427,7 +427,7 @@ class Pages extends StatelessWidget {
                     "Ramones, 1974 yılında New York'ta kurulmuş, 2263 konser vermiş, 14 stüdyo albümü olan Amerikalı bir punk rock grubudur. Müzikleri basit olarak görülse de birçok kişiye ulaşmışlardır."
                     "Vokalde Joey Ramone (Jeffrey Hyman, grup ilk kurulduğunda davul çalıyordu), gitarda Johnny Ramone (John Cummings), bas gitarda Dee Dee Ramone (Douglas Colvin, 1974-1989) ve davulda Tommy Ramone (Thomas Erdelyi, 1974-1978) olarak kurulan (zaman geçtikçe gruptan ayrılanlarla değişen elemanlar:Marky Ramone-Marc Steven Bell; 1978-1983,1987-1996; Richie Ramone-Richard Reinhardt, 1983-1987; Elvis Ramone-Clem Burke; Billy Rogers; ",
                 data2:
-                    "  C.J. Ramone-Christopher Ward, 1989-1996) New York underground rock çevresinde, bilhassa CBGB (Country, Blue Grass, and Blues) adlı barda çalmaya başlamalarıyla kısa zamanda tanınmışlardır.",
+                    "  C.J. Ramone-Christopher Ward, 1989-1996) New York underground rock çevresinde, bilhassa CBGB adlı barda çalmışlardır.",
               );
             }
             if (pagename == "Punk(3)") {
@@ -438,7 +438,7 @@ class Pages extends StatelessWidget {
                     "Bu süre içerisinde yalnızca bir stüdyo albümü kaydetmiş (1977'de Never Mind the Bollocks, Here's the Sex Pistols) ve dört adet single yayınlamışlardır."
                     "Yayınladıkları tek stüdyo albümü, 2003 yılında Rolling Stone dergisinin yayınladığı tüm zamanların en iyi 500 albümü listesinde 41. sırada yer almıştır.[1] 2010 yılında yeniden toplanarak Londra'da bir konser vermiştir.",
                 data2:
-                    "Sex Pistols'ın kurucuları, vokalist Johnny Rotten, basçı Glen Matlock, gitarist Steve Jones ve baterist Paul Cook'tur. 1977 yılında Matlock'ın yerine Sid Vicious geçmiştir.",
+                    "Sex Pistols'ın kurucuları, vokalist Johnny Rotten, basçı Glen Matlock, gitarist Steve Jones ve baterist Paul Cook'tur. ",
               );
             }
           })()),

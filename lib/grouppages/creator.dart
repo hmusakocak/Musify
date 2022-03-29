@@ -50,9 +50,9 @@ class Me extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top:30,),
-                    child: Text("'Bu uygulama HMK tarafından",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.brown),),
+                    child: Text("'Bu uygulama HMK tarafından",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.brown),),
                   ),
-                  Text("geliştirilmektedir.'",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.brown),),
+                  Text("geliştirilmektedir.'",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.brown),),
                 ],
               ),
             ),
