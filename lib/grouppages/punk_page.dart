@@ -11,6 +11,7 @@ class PunkTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        padding: EdgeInsets.only(),
         decoration: (() {
           if (groupname == "sexpistols") {
             return BoxDecoration(
