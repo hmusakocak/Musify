@@ -412,12 +412,12 @@ class Pages extends StatelessWidget {
             }
             if (pagename == "Punk") {
               return PunkTemplate(
-                groupname: "socialdist",
-                data1:
-                    "Sex Pistols, İngiliz punk rock türünde simgeleşmiş ve pek çok gruba ilham kaynağı olmuş bir punk grubudur. BBC tarafından tam anlamıyla bir İngiliz punk grubu şeklinde tasvir edilmiştir. Grup yalnızca üç sene boyunca (1975-1978) aktif kalmış ve dağılmıştır. Bu süre içerisinde yalnızca bir stüdyo albümü kaydetmiş (1977'de Never Mind the Bollocks, Here's the Sex Pistols) ve dört adet single yayınlamışlardır."
-                    "Yayınladıkları tek stüdyo albümü, 2003 yılında Rolling Stone dergisinin yayınladığı tüm zamanların en iyi 500 albümü listesinde 41. sırada yer almıştır. 2010 yılında yeniden toplanarak Londra'da bir konser vermiştir.",
-                data2:
-                    "Sex Pistols'ın kurucuları, vokalist Johnny Rotten, basçı Glen Matlock, gitarist Steve Jones ve baterist Paul Cook'tur.",
+               groupname: "socialdist",
+                data1: "Social Distortion, 1978'de Fullerton, California'da kurulmuş bir Amerikan punk rock grubudur."
+                    " Grup şu anda Mike Ness (baş vokal, baş gitar), Jonny Wickersham (ritim gitar, geri vokal), Brent Harding (bas, geri vokal), David Hidalgo Jr. (bateri) ve David Kalish'ten (klavye) oluşuyor."
+                    "1970'lerin sonunda 1980'lerin başına kadar hardcore bir punk grubu olarak başlayan Social Distortion, 1980'lerin ortalarında Ness'in uyuşturucu bağımlılığı ve çeşitli rehabilitasyonda uzun süreli görevlerle sonuçlanan yasayla ilgili sorunlar nedeniyle geçici bir ara verecekti."
+                    "44 yıllık performanstan sonra Social Distortion turneye ve müzik kaydetmeye devam ediyor.",
+                data2: "Social Distortion bugüne kadar yedi tam uzunlukta stüdyo albümü, iki derleme, bir canlı albüm ve iki DVD yayınladı."
               );
             }
             if (pagename == "Punk(2)") {
