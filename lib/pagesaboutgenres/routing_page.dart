@@ -1,10 +1,15 @@
+
 import 'package:application_1/grouppages/blues_page.dart';
 import 'package:application_1/grouppages/country_page.dart';
 import 'package:application_1/grouppages/metal_page.dart';
 import 'package:application_1/grouppages/punk_page.dart';
 import 'package:application_1/grouppages/rap_page.dart';
 import 'package:flutter/material.dart';
-import 'grouppages/rock_page.dart';
+import '../grouppages/rock_page.dart';
+
+ List<String> likedgroups = [];
+
+var distinctIds = [];
 
 class Pages extends StatelessWidget {
   Pages({Key? key, @required this.pagename}) : super(key: key);
@@ -18,6 +23,73 @@ class Pages extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    String? a;
+                    if (pagename == "Punk") {
+                      a = "Social Distortion";
+                    }
+                    if (pagename == "Punk(2)") {
+                      a = "The Ramones";
+                    }
+                    if (pagename == "Punk(3)") {
+                      a = "Sex Pistols";
+                    }
+                    if (pagename == "Rock") {
+                      a = "Greta Van Fleet";
+                    }
+                    if (pagename == "Rock(2)") {
+                      a = "Led Zeppelin";
+                    }
+                    if (pagename == "Rock(3)") {
+                      a = "Guns N' Roses";
+                    }
+                    if (pagename == "Country") {
+                      a = "A.R.C. Angels";
+                    }
+                    if (pagename == "Country(2)") {
+                      a = "AeroSmith";
+                    }
+                    if (pagename == "Country(3)") {
+                      a = "AllThemWitches";
+                    }
+                    if (pagename == "Rap") {
+                      a = "Cartel";
+                    }
+                    if (pagename == "Rap(2)") {
+                      a = "Sansar Salvo";
+                    }
+                    if (pagename == "Rap(3)") {
+                      a = "Eminem";
+                    }
+                    if (pagename == "Blues") {
+                      a = "Blue Blues Band";
+                    }
+                    if (pagename == "Blues(2)") {
+                      a = "BB King";
+                    }
+                    if (pagename == "Blues(3)") {
+                      a = "ZZ Top";
+                    }
+                    if (pagename == "Metal") {
+                      a = "Iron Maiden";
+                    }
+                    if (pagename == "Metal(2)") {
+                      a = "Judas Priest";
+                    }
+                    if (pagename == "Metal(3)") {
+                      a = "Black Sabbath";
+                    }
+
+                    likedgroups.add(a.toString());
+
+                    distinctIds = [...{...likedgroups}];
+
+                    },
+                  color: Colors.blue,
+                  icon: Icon(Icons.add_circle))
+            ],
             title: ((() {
               if (pagename == "Punk") {
                 return Padding(
@@ -325,7 +397,8 @@ class Pages extends StatelessWidget {
             }
             if (pagename == "Metal") {
               return MetalTemplate(
-                data: "Iron Maiden, 1975 yılında Londra'da kurulmuş bir İngiliz heavy metal grubudur. Grup basçı Steve Harris tarafından kurulmuştur. Bugüne kadar 16 stüdyo albümü, 11 canlı albüm, 4 EP ve 7 derleme albüm olmak üzere toplamda 38 albüm yayımlayan grubun, toplam albüm satışları kesin olarak bilinmemekle birlikte bu sayının 100 milyonun üzerinde olduğu düşünülmektedir."
+                data:
+                    "Iron Maiden, 1975 yılında Londra'da kurulmuş bir İngiliz heavy metal grubudur. Grup basçı Steve Harris tarafından kurulmuştur. Bugüne kadar 16 stüdyo albümü, 11 canlı albüm, 4 EP ve 7 derleme albüm olmak üzere toplamda 38 albüm yayımlayan grubun, toplam albüm satışları kesin olarak bilinmemekle birlikte bu sayının 100 milyonun üzerinde olduğu düşünülmektedir."
                     "Grup çeşitli kadro değişikliklerinin ardından kendi adını taşıyan ilk albümü Iron Maiden'ı 1980 yılında çıkarmıştır. Solist Bruce Dickinson'ın gruba katılmasının ardından 1982 yılında yayımladıkları The Number of the Beast adlı albümleriyle Iron Maiden dünya çapında şöhrete erişmiş ve 1980'ler boyunca peş peşe çıkardıkları albümlerle büyük başarı kazanmıştır. 1993 yılında solist Dickinson gruptan ayrılmış ve yerine Blaze Bayley gelmiştir. Bu dönemde grubun albüm satışları belirgin şekilde düşmüştür. Dickinson ve 1989 yılında gruptan ayrılan gitarist Adrian Smith 1999'da kadroya yeniden dahil olmuşlardır. 2021'de yayınladıkları son stüdyo albümleri Senjutsu, Billboard 200'de üçüncü, on üç ülkede de birinci sıraya yükselmiştir.",
                 groupname: "ironmaiden",
                 name1: "Dave Murray",
@@ -335,7 +408,8 @@ class Pages extends StatelessWidget {
             }
             if (pagename == "Metal(2)") {
               return MetalTemplate(
-                data: "Grubun 1990 yılında çıkardığı Painkiller albümünden sonra, 1992 yılında Rob Halford gruptan ayrılmış ve onun yerine Ripper Owens geçmiştir. Ripper'ın kendi yorumunu kattığı şarkılar her ne kadar belli bir kesimi memnun etse de Halford hayranları bu değişikliği iyi karşılamamıştır. Diğer albümlere göre daha küçük bir İngiliz plak şirketi ile yapılan anlaşma ile 1997 yılında Jugulator albümü çıkmıştır. Ripper'ın etkileyici ve Halford'a göre daha yoğun vokali olmasına karşın, grubun ilk vokalini arayan kesim fazladır. Ripper Owens, gruba uyum sağlayamayarak gruptan ayrılmıştır. Owens'in, Judas Priest şarkıları çalan bir fan grubundan, hayranı olduğu grubun frontmani olması Rockstar adlı filme esin kaynağı olmuştur. Filmde yaratılan kurgusal grup, bazı metal ve Judas Priest fanları tarafından kült konumuna yükseltilmiştir."
+                data:
+                    "Grubun 1990 yılında çıkardığı Painkiller albümünden sonra, 1992 yılında Rob Halford gruptan ayrılmış ve onun yerine Ripper Owens geçmiştir. Ripper'ın kendi yorumunu kattığı şarkılar her ne kadar belli bir kesimi memnun etse de Halford hayranları bu değişikliği iyi karşılamamıştır. Diğer albümlere göre daha küçük bir İngiliz plak şirketi ile yapılan anlaşma ile 1997 yılında Jugulator albümü çıkmıştır. Ripper'ın etkileyici ve Halford'a göre daha yoğun vokali olmasına karşın, grubun ilk vokalini arayan kesim fazladır. Ripper Owens, gruba uyum sağlayamayarak gruptan ayrılmıştır. Owens'in, Judas Priest şarkıları çalan bir fan grubundan, hayranı olduğu grubun frontmani olması Rockstar adlı filme esin kaynağı olmuştur. Filmde yaratılan kurgusal grup, bazı metal ve Judas Priest fanları tarafından kült konumuna yükseltilmiştir."
                     "Rob Halford'un kadroya geri dönüşüyle, 2005'te, Angel Of Retribution albümünü yayınlamıştır. Grup, Ripper Owens yıllarının ardından, Painkiller'a yakın bir albüm çıkartarak büyük başarı sağlamıştır. Grup aynı kadroyla 2008 yılında da 23 şarkıdan oluşan Nostradamus adlı albümü piyasaya sürmüştür.",
                 groupname: "judas",
                 name1: "Glenn Tipton",
@@ -345,7 +419,8 @@ class Pages extends StatelessWidget {
             }
             if (pagename == "Metal(3)") {
               return MetalTemplate(
-                data: "Black Sabbath; 1968 yılında Aston, Birmingham'da Tony Iommi (gitar), Ozzy Osbourne (vokal), Geezer Butler (bass) ve Bill Ward (davul) tarafından kurulan İngiliz rock grubudur ve çoğunlukla heavy metal müziğin öncüsü olarak kabul edilir. Grup; Black Sabbath (1970), Paranoid (1970) ve Master of Reality (1971) albümleriyle heavy metal tarzının ortaya çıkmasını ve tanımlanmasını sağlamıştır."
+                data:
+                    "Black Sabbath; 1968 yılında Aston, Birmingham'da Tony Iommi (gitar), Ozzy Osbourne (vokal), Geezer Butler (bass) ve Bill Ward (davul) tarafından kurulan İngiliz rock grubudur ve çoğunlukla heavy metal müziğin öncüsü olarak kabul edilir. Grup; Black Sabbath (1970), Paranoid (1970) ve Master of Reality (1971) albümleriyle heavy metal tarzının ortaya çıkmasını ve tanımlanmasını sağlamıştır."
                     "Grup birçok üye değişimi yaşamış olmasına rağmen, yıllar boyunca grubun tek değişmeyen üyesi Tony Iommi olmuştur. Tony Iommi ve Bill Ward 1967 ve 1968'li yıllarda Mythology adlı grupta, Ozzy Osbourne ve Geezer Butler ise Rare Breed’de çalıyordu."
                     "aha sonra dördü birleşip Polka Tulk Blues isimli bir grup kurdular, ismi değişip Earth oldu. Butler bir gün sokakta Boris Karloff’un oynadığı Black Sabbath filmini izlemek için sıraya giren insanları gördü ve insanların korkmak için bir filme gidiyorlarsa korkmak için müzik de dinleyebileceklerini düşündü bunun ardından Osbourne ve Butler Black Sabbath isimli bir şarkı yazdı, grubun ismi değişip Black Sabbath oldu ve dark blues olarak tanımladıkları müziği yapmaya başladılar.",
                 groupname: "sabbath",
@@ -412,13 +487,14 @@ class Pages extends StatelessWidget {
             }
             if (pagename == "Punk") {
               return PunkTemplate(
-               groupname: "socialdist",
-                data1: "Social Distortion, 1978'de Fullerton, California'da kurulmuş bir Amerikan punk rock grubudur."
-                    " Grup şu anda Mike Ness (baş vokal, baş gitar), Jonny Wickersham (ritim gitar, geri vokal), Brent Harding (bas, geri vokal), David Hidalgo Jr. (bateri) ve David Kalish'ten (klavye) oluşuyor."
-                    "1970'lerin sonunda 1980'lerin başına kadar hardcore bir punk grubu olarak başlayan Social Distortion, 1980'lerin ortalarında Ness'in uyuşturucu bağımlılığı ve çeşitli rehabilitasyonda uzun süreli görevlerle sonuçlanan yasayla ilgili sorunlar nedeniyle geçici bir ara verecekti."
-                    "44 yıllık performanstan sonra Social Distortion turneye ve müzik kaydetmeye devam ediyor.",
-                data2: "Social Distortion bugüne kadar yedi tam uzunlukta stüdyo albümü, iki derleme, bir canlı albüm ve iki DVD yayınladı."
-              );
+                  groupname: "socialdist",
+                  data1:
+                      "Social Distortion, 1978'de Fullerton, California'da kurulmuş bir Amerikan punk rock grubudur."
+                      " Grup şu anda Mike Ness (baş vokal, baş gitar), Jonny Wickersham (ritim gitar, geri vokal), Brent Harding (bas, geri vokal), David Hidalgo Jr. (bateri) ve David Kalish'ten (klavye) oluşuyor."
+                      "1970'lerin sonunda 1980'lerin başına kadar hardcore bir punk grubu olarak başlayan Social Distortion, 1980'lerin ortalarında Ness'in uyuşturucu bağımlılığı ve çeşitli rehabilitasyonda uzun süreli görevlerle sonuçlanan yasayla ilgili sorunlar nedeniyle geçici bir ara verecekti."
+                      "44 yıllık performanstan sonra Social Distortion turneye ve müzik kaydetmeye devam ediyor.",
+                  data2:
+                      "Social Distortion bugüne kadar yedi tam uzunlukta stüdyo albümü, iki derleme, bir canlı albüm ve iki DVD yayınladı.");
             }
             if (pagename == "Punk(2)") {
               return PunkTemplate(

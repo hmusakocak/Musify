@@ -1,9 +1,11 @@
+import 'package:application_1/navigatedmainpage.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -16,7 +18,9 @@ class MyApp extends StatelessWidget {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white, statusBarIconBrightness: Brightness.dark));
       return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyhomePage(),
+      home: NavigatedMainPage(),
     );
   }
 }
+
+

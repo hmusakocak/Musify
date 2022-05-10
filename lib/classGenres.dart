@@ -1,4 +1,4 @@
-import 'genre_container.dart';
+import 'pagesaboutgenres/genre_container.dart';
 
 class my_Genres {
   genre_cont rock = genre_cont(name: 'Rock');

@@ -1,3 +1,4 @@
+
 import 'routing_page.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +25,7 @@ class GenrePage extends StatelessWidget {
             appBar: AppBar(
               elevation: 0,
               backgroundColor: Colors.black,
+
               leading: IconButton(
                 onPressed: () {
                   Navigator.pop(context);

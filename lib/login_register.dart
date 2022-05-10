@@ -1,8 +1,14 @@
+import 'package:application_1/registerpage.dart';
 import 'package:flutter/material.dart';
 
-class LoginRegister extends StatelessWidget {
+class LoginRegister extends StatefulWidget {
   const LoginRegister({Key? key}) : super(key: key);
 
+  @override
+  State<LoginRegister> createState() => _LoginRegisterState();
+}
+
+class _LoginRegisterState extends State<LoginRegister> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -82,10 +88,9 @@ class LoginRegister extends StatelessWidget {
                       child: Text(
                         "Şifre:",
                         style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.purple
-                        ),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.purple),
                       ),
                     ),
                     Padding(
@@ -157,7 +162,12 @@ class LoginRegister extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          // Respond to button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => registerPage(),
+                            ),
+                          );
                         },
                         child: Text('Kayıt Ol'),
                       ),

@@ -30,7 +30,6 @@ class RockTemplate extends StatelessWidget {
            ),
         width: double.infinity,
         height: double.infinity,
-
         child: ScrollConfiguration(
           behavior: MyBehavior(),
           child: SingleChildScrollView(

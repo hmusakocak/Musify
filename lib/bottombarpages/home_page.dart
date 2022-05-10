@@ -1,10 +1,10 @@
 
-import 'package:application_1/genre_container.dart';
-import 'package:application_1/row_containers.dart';
+import 'package:application_1/pagesaboutgenres/genre_container.dart';
+import 'package:application_1/pagesaboutgenres/row_containers.dart';
 import 'package:application_1/Logo.dart';
 import 'package:flutter/material.dart';
-import 'classGenres.dart';
-import 'genre_pages.dart';
+import '../classGenres.dart';
+import '../pagesaboutgenres/genre_pages.dart';
 
 extension StringExtension on String {
   String firstletterupper() {
@@ -172,16 +172,6 @@ class _MyhomePageState extends State<MyhomePage> {
           child: SingleChildScrollView(
             child: GestureDetector(
               child: mybodycont,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => GenrePage(
-                      textname: 'funk',
-                    ),
-                  ),
-                );
-              },
             ),
           ),
         ),

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "114886363864",
+    "project_id": "myfirebase-7ac2c",
+    "storage_bucket": "myfirebase-7ac2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114886363864:android:f1a5fa2afa1b111aa1a5ad",
+        "android_client_info": {
+          "package_name": "com.hmk.musify.application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114886363864-kgbpi625d46ecqmet2vuljd6qhvolrkb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABN0gYb1OUGC79FgWoneeuZaFHzSJPPkI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114886363864-kgbpi625d46ecqmet2vuljd6qhvolrkb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
