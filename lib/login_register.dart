@@ -8,6 +8,7 @@ class LoginRegister extends StatefulWidget {
   State<LoginRegister> createState() => _LoginRegisterState();
 }
 
+
 class _LoginRegisterState extends State<LoginRegister> {
   @override
   Widget build(BuildContext context) {
@@ -154,6 +155,7 @@ class _LoginRegisterState extends State<LoginRegister> {
                         ),
                       ),
                       ElevatedButton(
+
                         style: ElevatedButton.styleFrom(
                           primary: Colors.purple,
                           padding: EdgeInsets.symmetric(
