@@ -1,3 +1,4 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 class CountryTemplate extends StatelessWidget {
@@ -26,21 +27,36 @@ class CountryTemplate extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  width: 130,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.black,
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "groupinfos/$groupname/$groupname.png",
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
+                FutureBuilder(
+                    future: FirebaseStorage.instance
+                        .ref("groupinfos/$groupname/$groupname.png")
+                        .getDownloadURL(),
+                    builder:
+                        (BuildContext context, AsyncSnapshot<String> snapshot) {
+                      if (!snapshot.hasData ||
+                          snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      }
+                      if (snapshot.connectionState == ConnectionState.done &&
+                          snapshot.hasData) {
+                        return Container(
+                          width: 130,
+                          height: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.black,
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.network(
+                              snapshot.data!,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        );
+                      }
+                      return Container();
+                    }),
                 Padding(
                   padding: const EdgeInsets.only(
                     top: 5,
@@ -68,21 +84,36 @@ class CountryTemplate extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  width: 130,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.black,
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "groupinfos/$groupname/$groupname(2).png",
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
+                FutureBuilder(
+                    future: FirebaseStorage.instance
+                        .ref("groupinfos/$groupname/$groupname(2).png")
+                        .getDownloadURL(),
+                    builder:
+                        (BuildContext context, AsyncSnapshot<String> snapshot) {
+                      if (!snapshot.hasData ||
+                          snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      }
+                      if (snapshot.connectionState == ConnectionState.done &&
+                          snapshot.hasData) {
+                        return Container(
+                          width: 130,
+                          height: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.black,
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.network(
+                              snapshot.data!,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        );
+                      }
+                      return Container();
+                    }),
                 Padding(
                   padding: const EdgeInsets.only(
                     top: 5,
@@ -110,21 +141,37 @@ class CountryTemplate extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  width: 130,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.black,
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "groupinfos/$groupname/$groupname(3).png",
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
+                FutureBuilder(
+                    future: FirebaseStorage.instance
+                        .ref("groupinfos/$groupname/$groupname(3).png")
+                        .getDownloadURL(),
+                    builder:
+                        (BuildContext context, AsyncSnapshot<String> snapshot) {
+                      if (!snapshot.hasData ||
+                          snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      }
+                      if (snapshot.connectionState == ConnectionState.done &&
+                          snapshot.hasData) {
+                        return Container(
+                          width: 130,
+                          height: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.black,
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.network(
+                              snapshot.data!,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        );
+                      }
+                      return Container();
+                    }),
+
                 Padding(
                   padding: const EdgeInsets.only(
                     top: 5,

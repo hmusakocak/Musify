@@ -1,4 +1,5 @@
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 class MyBehavior extends ScrollBehavior {
@@ -41,14 +42,30 @@ class RockTemplate extends StatelessWidget {
                   decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.deepOrange.withOpacity(0.8),Colors.yellow.withOpacity(0.8)]),borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     children: [
-                      Container(
-                        width: 150,
-                        height: 150,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                                image: AssetImage("groupinfos/$groupname/$groupname(5).png"))),
-                      ),
+                      FutureBuilder(
+                          future: FirebaseStorage.instance
+                              .ref("groupinfos/$groupname/$groupname(5).png")
+                              .getDownloadURL(),
+                          builder:
+                              (BuildContext context, AsyncSnapshot<String> snapshot) {
+                            if (!snapshot.hasData ||
+                                snapshot.connectionState == ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            if (snapshot.connectionState == ConnectionState.done &&
+                                snapshot.hasData) {
+                              return Container(
+                                width: 150,
+                                height: 150,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    image: DecorationImage(
+                                        image: NetworkImage(snapshot.data!))),
+                              );
+                            }
+                            return Container();
+                          }),
+
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
@@ -76,14 +93,29 @@ class RockTemplate extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        width: 150,
-                        height: 150,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                                image: AssetImage("groupinfos/$groupname/$groupname(4).png"))),
-                      ),
+                      FutureBuilder(
+                          future: FirebaseStorage.instance
+                              .ref("groupinfos/$groupname/$groupname(4).png")
+                              .getDownloadURL(),
+                          builder:
+                              (BuildContext context, AsyncSnapshot<String> snapshot) {
+                            if (!snapshot.hasData ||
+                                snapshot.connectionState == ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            if (snapshot.connectionState == ConnectionState.done &&
+                                snapshot.hasData) {
+                              return Container(
+                                width: 150,
+                                height: 150,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    image: DecorationImage(
+                                        image: NetworkImage(snapshot.data!))),
+                              );
+                            }
+                            return Container();
+                          }),
                     ],
                   ),
                 ),
@@ -94,15 +126,29 @@ class RockTemplate extends StatelessWidget {
                   decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.deepOrange.withOpacity(0.8),Colors.yellow.withOpacity(0.8)]),borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     children: [
-                      Container(
-                        width: 150,
-                        height: 150,
-                        decoration: BoxDecoration(
-                          color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                                image: AssetImage("groupinfos/$groupname/$groupname(3).png"))),
-                      ),
+                      FutureBuilder(
+                          future: FirebaseStorage.instance
+                              .ref("groupinfos/$groupname/$groupname(3).png")
+                              .getDownloadURL(),
+                          builder:
+                              (BuildContext context, AsyncSnapshot<String> snapshot) {
+                            if (!snapshot.hasData ||
+                                snapshot.connectionState == ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            if (snapshot.connectionState == ConnectionState.done &&
+                                snapshot.hasData) {
+                              return Container(
+                                width: 150,
+                                height: 150,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    image: DecorationImage(
+                                        image: NetworkImage(snapshot.data!))),
+                              );
+                            }
+                            return Container();
+                          }),
                       Expanded(
 
                         child: Padding(
@@ -131,14 +177,29 @@ class RockTemplate extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        width: 150,
-                        height: 150,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                                image: AssetImage("groupinfos/$groupname/$groupname(2).png"))),
-                      ),
+                      FutureBuilder(
+                          future: FirebaseStorage.instance
+                              .ref("groupinfos/$groupname/$groupname(2).png")
+                              .getDownloadURL(),
+                          builder:
+                              (BuildContext context, AsyncSnapshot<String> snapshot) {
+                            if (!snapshot.hasData ||
+                                snapshot.connectionState == ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            if (snapshot.connectionState == ConnectionState.done &&
+                                snapshot.hasData) {
+                              return Container(
+                                width: 150,
+                                height: 150,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    image: DecorationImage(
+                                        image: NetworkImage(snapshot.data!))),
+                              );
+                            }
+                            return Container();
+                          }),
                     ],
                   ),
                 ),
@@ -149,14 +210,29 @@ class RockTemplate extends StatelessWidget {
                   decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.deepOrange.withOpacity(0.8),Colors.yellow.withOpacity(0.8)]),borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     children: [
-                      Container(
-                        width: 150,
-                        height: 150,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                                image: AssetImage("groupinfos/$groupname/$groupname.png"))),
-                      ),
+                      FutureBuilder(
+                          future: FirebaseStorage.instance
+                              .ref("groupinfos/$groupname/$groupname.png")
+                              .getDownloadURL(),
+                          builder:
+                              (BuildContext context, AsyncSnapshot<String> snapshot) {
+                            if (!snapshot.hasData ||
+                                snapshot.connectionState == ConnectionState.waiting) {
+                              return CircularProgressIndicator();
+                            }
+                            if (snapshot.connectionState == ConnectionState.done &&
+                                snapshot.hasData) {
+                              return Container(
+                                width: 150,
+                                height: 150,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    image: DecorationImage(
+                                        image: NetworkImage(snapshot.data!))),
+                              );
+                            }
+                            return Container();
+                          }),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),

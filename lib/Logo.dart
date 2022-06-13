@@ -1,7 +1,4 @@
-
-import 'package:application_1/grouppages/creator.dart';
-import 'package:application_1/login_register.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:application_1/models/creator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 
@@ -16,25 +13,13 @@ class _MylogoState extends State<Mylogo> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-
+      onDoubleTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Me(
-            ),
+            builder: (context) => Me(),
           ),
         );
-      },
-      onDoubleTap: (){
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginRegister(
-            ),
-          ),
-        );
-
       },
       child: GlowText(
         'Musify',

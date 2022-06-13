@@ -1,3 +1,4 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -29,21 +30,65 @@ class MetalTemplate extends StatelessWidget {
               SizedBox(width: 13,),
               Column(
                 children: [
-                  CircleAvatar(backgroundImage: AssetImage("groupinfos/$groupname/$groupname.png"),minRadius: 60,maxRadius: 60,),
+                  FutureBuilder(
+                      future: FirebaseStorage.instance
+                          .ref("groupinfos/$groupname/$groupname.png")
+                          .getDownloadURL(),
+                      builder:
+                          (BuildContext context, AsyncSnapshot<String> snapshot) {
+                        if (!snapshot.hasData ||
+                            snapshot.connectionState == ConnectionState.waiting) {
+                          return CircularProgressIndicator();
+                        }
+                        if (snapshot.connectionState == ConnectionState.done &&
+                            snapshot.hasData) {
+                          return CircleAvatar(backgroundImage: NetworkImage(snapshot.data!),minRadius: 60,maxRadius: 60,);
+                        }
+                        return Container();
+                      }),
+
                   Text(name1.toString(),style: TextStyle(color: Colors.white),),
                 ],
               ),
               SizedBox(width: 13,),
               Column(children: [
-                CircleAvatar(backgroundImage: AssetImage("groupinfos/$groupname/$groupname(2).png"),minRadius: 60,maxRadius: 60,),
-
+                FutureBuilder(
+                    future: FirebaseStorage.instance
+                        .ref("groupinfos/$groupname/$groupname(2).png")
+                        .getDownloadURL(),
+                    builder:
+                        (BuildContext context, AsyncSnapshot<String> snapshot) {
+                      if (!snapshot.hasData ||
+                          snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      }
+                      if (snapshot.connectionState == ConnectionState.done &&
+                          snapshot.hasData) {
+                        return CircleAvatar(backgroundImage: NetworkImage(snapshot.data!),minRadius: 60,maxRadius: 60,);
+                      }
+                      return Container();
+                    }),
                 Text(name2.toString(),style: TextStyle(color: Colors.white),),
               ]),
               SizedBox(width: 13,),
 
               Column(children: [
-                CircleAvatar(backgroundImage: AssetImage("groupinfos/$groupname/$groupname(3).png"),minRadius: 60,maxRadius: 60,),
-
+                FutureBuilder(
+                    future: FirebaseStorage.instance
+                        .ref("groupinfos/$groupname/$groupname(3).png")
+                        .getDownloadURL(),
+                    builder:
+                        (BuildContext context, AsyncSnapshot<String> snapshot) {
+                      if (!snapshot.hasData ||
+                          snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      }
+                      if (snapshot.connectionState == ConnectionState.done &&
+                          snapshot.hasData) {
+                        return CircleAvatar(backgroundImage: NetworkImage(snapshot.data!),minRadius: 60,maxRadius: 60,);
+                      }
+                      return Container();
+                    }),
                 Text(name3.toString(),style: TextStyle(color: Colors.white),),
               ]),
             ],

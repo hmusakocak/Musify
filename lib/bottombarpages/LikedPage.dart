@@ -15,8 +15,9 @@ class _LikedPageState extends State<LikedPage> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           centerTitle: true,
-          title: Text('BEGENILENLER'),
+          title: Text('BEĞENİLENLER'),
           backgroundColor: Colors.white,
           titleTextStyle: TextStyle(
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
@@ -44,12 +45,14 @@ class _MylistState extends State<Mylist> {
       itemBuilder: (BuildContext context, int index) {
         return Dismissible(
           background: Container(
-            color: Colors.red,
+            decoration: BoxDecoration(color: Colors.red,
+              borderRadius: BorderRadius.circular(15),
+            ),
           ),
           key: ValueKey<String>(distinctIds[index]),
           onDismissed: (DismissDirection direction) {
             setState(() {
-              for(int i = 0;i<1000;i++)
+              for(int i = 0;i<index+1;i++)
 
               {likedgroups.remove(distinctIds[index]);}
 

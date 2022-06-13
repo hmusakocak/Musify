@@ -31,6 +31,15 @@ dependencies:
   cloud_firestore: ^3.1.12
   firebase_auth: ^3.3.16
   firebase_storage: ^10.2.14
+  firebase_core: ^1.17.1
+  http: ^0.13.4
+  animations: ^2.0.3
+  pie_chart: ^5.3.1
+  file_picker: ^4.6.1
+  open_file: ^3.2.1
+  audioplayers: ^1.0.0
+  path_provider: ^2.0.11
+
   flutter:
     sdk: flutter
 
@@ -67,28 +76,6 @@ flutter:
   # assets:
    - assets/images/
    - assets/fonts/
-   - groupinfos/greta/
-   - groupinfos/ledzep/
-   - groupinfos/judas/
-   - groupinfos/gunsnroses/
-   - groupinfos/sansarsalvo/
-   - groupinfos/cartel/
-   - groupinfos/eminem/
-   - groupinfos/ironmaiden/
-   - groupinfos/zztop/
-   - groupinfos/bbb/
-   - groupinfos/bbking/
-   - groupinfos/arcangels/
-   - groupinfos/aerosmith/
-   - groupinfos/sabbath/
-   - groupinfos/socialdist/
-   - groupinfos/ramones/
-   - groupinfos/sexpistols/
-   - groupinfos/atw/
-   - groupinfos/
-
-
-
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

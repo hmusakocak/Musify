@@ -1,3 +1,4 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 class PunkTemplate extends StatelessWidget {
@@ -44,75 +45,136 @@ class PunkTemplate extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Container(
-                          width: 150,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.black,
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(
-                              "groupinfos/$groupname/$groupname.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
+                        FutureBuilder(
+                            future: FirebaseStorage.instance
+                                .ref("groupinfos/$groupname/$groupname.png")
+                                .getDownloadURL(),
+                            builder:
+                                (BuildContext context, AsyncSnapshot<String> snapshot) {
+                              if (!snapshot.hasData ||
+                                  snapshot.connectionState == ConnectionState.waiting) {
+                                return CircularProgressIndicator();
+                              }
+                              if (snapshot.connectionState == ConnectionState.done &&
+                                  snapshot.hasData) {
+                                return Container(
+                                  width: 150,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.black,
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.network(
+                                      snapshot.data!,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                );
+                              }
+                              return Container();
+                            }),
+
                         SizedBox(
                           height: 25,
                         ),
-                        Container(
-                          width: 150,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.black,
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(
-                              "groupinfos/$groupname/$groupname(2).png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
+                        FutureBuilder(
+                            future: FirebaseStorage.instance
+                                .ref("groupinfos/$groupname/$groupname(2).png")
+                                .getDownloadURL(),
+                            builder:
+                                (BuildContext context, AsyncSnapshot<String> snapshot) {
+                              if (!snapshot.hasData ||
+                                  snapshot.connectionState == ConnectionState.waiting) {
+                                return CircularProgressIndicator();
+                              }
+                              if (snapshot.connectionState == ConnectionState.done &&
+                                  snapshot.hasData) {
+                                return Container(
+                                  width: 150,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.black,
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.network(
+                                      snapshot.data!,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                );
+                              }
+                              return Container();
+                            }),
                         SizedBox(
                           height: 25,
                         ),
-                        Container(
-                          width: 150,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.black,
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(
-                              "groupinfos/$groupname/$groupname(3).png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
+                        FutureBuilder(
+                            future: FirebaseStorage.instance
+                                .ref("groupinfos/$groupname/$groupname(3).png")
+                                .getDownloadURL(),
+                            builder:
+                                (BuildContext context, AsyncSnapshot<String> snapshot) {
+                              if (!snapshot.hasData ||
+                                  snapshot.connectionState == ConnectionState.waiting) {
+                                return CircularProgressIndicator();
+                              }
+                              if (snapshot.connectionState == ConnectionState.done &&
+                                  snapshot.hasData) {
+                                return Container(
+                                  width: 150,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.black,
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.network(
+                                      snapshot.data!,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                );
+                              }
+                              return Container();
+                            }),
                         SizedBox(
                           height: 25,
                         ),
-                        Container(
-                          width: 150,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Colors.black,
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(
-                              "groupinfos/$groupname/$groupname(4).png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
+                        FutureBuilder(
+                            future: FirebaseStorage.instance
+                                .ref("groupinfos/$groupname/$groupname(4).png")
+                                .getDownloadURL(),
+                            builder:
+                                (BuildContext context, AsyncSnapshot<String> snapshot) {
+                              if (!snapshot.hasData ||
+                                  snapshot.connectionState == ConnectionState.waiting) {
+                                return CircularProgressIndicator();
+                              }
+                              if (snapshot.connectionState == ConnectionState.done &&
+                                  snapshot.hasData) {
+                                return Container(
+                                  width: 150,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.black,
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.network(
+                                      snapshot.data!,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                );
+                              }
+                              return Container();
+                            }),
                       ],
                     ),
                   ),

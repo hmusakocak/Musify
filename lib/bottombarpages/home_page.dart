@@ -1,9 +1,11 @@
-
+import 'package:animations/animations.dart';
+import 'package:application_1/about_page.dart';
 import 'package:application_1/pagesaboutgenres/genre_container.dart';
 import 'package:application_1/pagesaboutgenres/row_containers.dart';
 import 'package:application_1/Logo.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../classGenres.dart';
+import '../pagesaboutgenres/classGenres.dart';
 import '../pagesaboutgenres/genre_pages.dart';
 
 extension StringExtension on String {
@@ -27,7 +29,7 @@ class MyBehavior extends ScrollBehavior {
   }
 }
 
- Widget ad = Mylogo();
+Widget ad = Mylogo();
 
 var aramabutonu = Icon(Icons.search);
 
@@ -46,8 +48,18 @@ class _MyhomePageState extends State<MyhomePage> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
           actions: [
+            IconButton(
+                onPressed: () async {
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.logout,
+                  color: Color(0xffDA44bb),
+                )),
             IconButton(
               color: Color(0xffDA44bb),
               icon: aramabutonu,
@@ -80,6 +92,12 @@ class _MyhomePageState extends State<MyhomePage> {
                                   mybodycont = Container(
                                     child: GestureDetector(
                                       onTap: () {
+                                        if(_controller.text.toLowerCase().trim() == "rock"){variables.rock++;}
+                                        if(_controller.text.toLowerCase().trim() == "rap"){variables.rap++;}
+                                        if(_controller.text.toLowerCase().trim() == "blues"){variables.blues++;}
+                                        if(_controller.text.toLowerCase().trim() == "metal"){variables.metal++;}
+                                        if(_controller.text.toLowerCase().trim() == "country"){variables.country++;}
+                                        if(_controller.text.toLowerCase().trim() == "punk"){variables.punk++;}
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
@@ -162,6 +180,27 @@ class _MyhomePageState extends State<MyhomePage> {
                 });
               },
             ),
+            OpenContainer(
+                transitionType: ContainerTransitionType.fadeThrough,
+                closedElevation: 0,
+                closedShape: CircleBorder(),
+                transitionDuration: Duration(milliseconds: 450),
+                closedBuilder: (context, action) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                        color: Colors.white,
+                    ),
+                    child: Icon(
+                      Icons.info_outline,
+                      color: Color(0xffDA44bb),
+                    ),
+                    width: 60,
+                  );
+                },
+                openBuilder: (context, action) {
+                  return AboutPage();
+                }),
           ],
           elevation: 0,
           centerTitle: false,
