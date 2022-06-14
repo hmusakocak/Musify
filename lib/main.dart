@@ -1,4 +1,4 @@
-import 'package:application_1/login_register_proccess/login_register.dart';
+import 'package:application_1/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white, statusBarIconBrightness: Brightness.dark));
       return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginRegister(),
+      home: SplashScreen(),
     );
   }
 }
