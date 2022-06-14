@@ -15,7 +15,6 @@ class _txt_rwState extends State<txt_rw> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -31,12 +30,6 @@ class _txt_rwState extends State<txt_rw> {
           ),
           elevation: 0,
           backgroundColor: Colors.white,
-          leading: IconButton(
-              color: Colors.black,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(Icons.arrow_back_ios)),
         ),
         body: SingleChildScrollView(
           child: Padding(
