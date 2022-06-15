@@ -89,8 +89,11 @@ class _txt_rwState extends State<txt_rw> {
                   onPressed: () {
                     txtoku().then((value) {
                       setState(() {
+                        if(txt_data.toString() == 'null')
+                      {txt_data = value ;}
                         if(txt_data.toString() != 'null')
                         {txt_data = txt_data.toString() + value ;}
+
                       });
                     });
                   },
@@ -106,6 +109,7 @@ class _txt_rwState extends State<txt_rw> {
                   ),
                   onPressed: () {
                     txt_data = '';
+                    controller.text = '';
                     txtyazdir(txt_data.toString());
                   },
                   child: Text('Komple Temizle'),

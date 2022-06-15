@@ -113,7 +113,7 @@ class AboutPage extends StatelessWidget {
                                     fontSize: 20),
                               ),
                               Text(
-                                'Flutter SDK on Android Studio',
+                                'Android Studio',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,

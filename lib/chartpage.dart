@@ -48,6 +48,7 @@ class _MypiePageState extends State<MypiePage> {
               "Rap": 100*variables.rap/(variables.rock.toDouble()+variables.metal.toDouble()+variables.blues.toDouble()+variables.rap.toDouble()+variables.punk.toDouble()+variables.country.toDouble()),
               "Metal": 100*variables.metal/(variables.rock.toDouble()+variables.metal.toDouble()+variables.blues.toDouble()+variables.rap.toDouble()+variables.punk.toDouble()+variables.country.toDouble()),
             },
+
             animationDuration: Duration(milliseconds: 800),
             chartLegendSpacing: 32,
             initialAngleInDegree: 0,
