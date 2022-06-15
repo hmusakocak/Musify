@@ -10,7 +10,7 @@ class txt_rw extends StatefulWidget {
 }
 class _txt_rwState extends State<txt_rw> {
   final controller = TextEditingController();
-  String? txtyaz='';
+  String? txt_data='';
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -89,8 +89,8 @@ class _txt_rwState extends State<txt_rw> {
                   onPressed: () {
                     txtoku().then((value) {
                       setState(() {
-                        if(txtyaz.toString() != 'null')
-                        {txtyaz = txtyaz.toString() + value ;}
+                        if(txt_data.toString() != 'null')
+                        {txt_data = txt_data.toString() + value ;}
                       });
                     });
                   },
@@ -105,8 +105,8 @@ class _txt_rwState extends State<txt_rw> {
                     ),
                   ),
                   onPressed: () {
-                    txtyaz = '';
-                    txtyazdir(txtyaz.toString());
+                    txt_data = '';
+                    txtyazdir(txt_data.toString());
                   },
                   child: Text('Komple Temizle'),
                 ),
@@ -117,7 +117,7 @@ class _txt_rwState extends State<txt_rw> {
                       children: [
                         Padding(
                           child: Text(
-                            txtyaz.toString(),
+                            txt_data.toString(),
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w900,
