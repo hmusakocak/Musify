@@ -41,6 +41,7 @@ dependencies:
   path_provider: ^2.0.10
   easy_splash_screen: ^1.0.3
 
+
   flutter:
     sdk: flutter
 
