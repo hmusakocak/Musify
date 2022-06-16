@@ -11,6 +11,7 @@ class txt_rw extends StatefulWidget {
 class _txt_rwState extends State<txt_rw> {
   final controller = TextEditingController();
   String? txt_data='';
+  String? readed_data='';
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -74,7 +75,8 @@ class _txt_rwState extends State<txt_rw> {
                     ),
                   ),
                   onPressed: () {
-                    txtyazdir(controller.text);
+                    txt_data = txt_data.toString() + controller.text.toString();
+                    txtyazdir(txt_data.toString());
                   },
                   child: Text('Kaydet'),
                 ),
@@ -89,15 +91,11 @@ class _txt_rwState extends State<txt_rw> {
                   onPressed: () {
                     txtoku().then((value) {
                       setState(() {
-                        if(txt_data.toString() == 'null')
-                      {txt_data = value ;}
-                        if(txt_data.toString() != 'null')
-                        {txt_data = txt_data.toString() + value ;}
-
+                        readed_data = txtoku().toString();
                       });
                     });
                   },
-                  child: Text('Veriyi Güncelle'),
+                  child: Text('Veriyi Aşağı Yazdır'),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
