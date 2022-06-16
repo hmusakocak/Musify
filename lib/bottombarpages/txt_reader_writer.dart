@@ -96,7 +96,7 @@ class _txt_rwState extends State<txt_rw> {
                       });
                     });
                   },
-                  child: Text('Veriyi Güncelle'),
+                  child: Text('Veriyi Getir'),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
