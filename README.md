@@ -1,4 +1,1 @@
-# MUSIFY
-
-# Flutter project
-# HMK
+MUSIFY
